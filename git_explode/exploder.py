@@ -124,7 +124,7 @@ class GitExploder(object):
             self.checkout_new(branch, self.base)
             return
 
-        deps = deps.keys()
+        deps = list(deps.keys())
         assert len(deps) >= 1
         self.logger.debug("  deps: %s" % ' '.join([d[:8] for d in deps]))
 
